@@ -1,0 +1,29 @@
+CREATE DATABASE student_new;
+
+USE student_new;
+
+CREATE TABLE student (
+    roll_no INT PRIMARY KEY,
+    student_name VARCHAR(50) NOT NULL,
+    student_city VARCHAR(10) NOT NULL,
+    mark INT NOT NULL
+);
+
+INSERT INTO student (roll_no, student_name, student_city, mark) VALUES
+(1, 'John Deo', 'pune', 75),
+(2, 'Max Ruin', 'mumbai', 85),
+(3, 'Arnold', 'satara', 55),
+(4, 'Krish Star', 'pune', 60),
+(5, 'John Mike', 'pune', 60),
+(6, 'Alex John', 'satara', 55),
+(7, 'My John Rob', 'satara', 78),
+(8, 'Asruid', 'pune', 85),
+(9, 'Tes Qry', 'mumbai', 78),
+(10, 'Big John', 'pune', 55);
+
+SELECT * FROM student;
+select count(*) as Total from student;
+select sum(roll_no) as mark_sum from student;
+select min(mark) as mark_sum from student;
+select max(mark) as mark_sum from student;
+select avg(mark) as mark_sum from student;
