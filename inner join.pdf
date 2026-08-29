@@ -1,0 +1,19 @@
+select * from product;
+select * from product_sale;
+
+INSERT INTO product (product_id, product_name, product_category)
+VALUES
+(1, "Sugar", 101),
+(2, "Salt",102),
+(3, "mobile",103);
+
+Insert into product_sale(product_category,product_sale,product_typ)
+values
+(101,"large","huge"),
+(102,"low","medium"),
+(103,"moderate","medium");
+
+SELECT product.product_category, product_sale.product_sale
+FROM product
+INNER JOIN product_sale
+ON product.product_category = product_sale.product_category;
